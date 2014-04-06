@@ -9,20 +9,36 @@ module.exports = {
 
 	create:function (req,res){
 		return res.json({
-			status:"you cannot create cards"
+			result:"you cannot create cards"
 		});
 	},
 
 	update:function (req,res){
 		return res.json({
-			status:"you cannot update"
+			result:"you cannot update"
 		});
 	},
 
 	destroy:function(req,res){
 		return res.json({
-			status:"you cant destroy"
-			});
+			result:"you cant destroy"
+		});
+	},
+
+	find:function(req,res) {
+		Cards.find(function(err,num) {
+			return res.json({
+				result: num
+			})
+		})
+	},
+
+	count:function(req,res){
+		Cards.count(function(err,num) {
+			return res.json({
+				result: num 
+			})
+		});
 	}
 	
 };

@@ -46,6 +46,18 @@ module.exports = {
 				result: num 
 			})
 		});
+	},
+
+	search: function(req,res) {
+		var field = req.param('field');
+		var value = req.param('value');
+
+		var search = {};
+		search[field] = value;
+
+		Cards.find().where(search).exec(function(err,cards) {
+			return res.json(cards);
+		});
 	}
 	
 };

@@ -45,6 +45,11 @@ module.exports.routes = {
   'get /cards/type/': {
         controller    : 'cards',
         action        : 'find'
+    },
+
+  'get /cards/:field/:value': {
+        controller    : 'cards',
+        action        : 'search'
     }
 
 };

@@ -26,11 +26,9 @@ module.exports = {
 	},
 
 	find:function(req,res) {
-		Cards.find(function(err,num) {
-			return res.json({
-				result: num
-			})
-		})
+		Cards.find(function(err,cards) {
+			return res.json(cards);
+		});
 	},
 
 	count:function(req,res){

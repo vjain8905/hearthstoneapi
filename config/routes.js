@@ -45,6 +45,16 @@ module.exports.routes = {
   'get /cards/type/': {
         controller    : 'cards',
         action        : 'find'
+    },
+
+    'get /cards/class/:class': {
+        controller  : 'cards',
+        action      : 'classs'
+    },
+
+    'get /cards/class/': {
+        controller  :'cards',
+        action      :'find'
     }
 
 };

@@ -46,6 +46,13 @@ module.exports = {
 				result: num 
 			})
 		});
-	}
-	
+	},
+    
+    classs: function(req,res){
+        var classs = req.param('class');
+        
+        Cards.find().where({classs: classs}).exec(function(err,cards){
+            return res.json(cards);
+        });
+    }
 };

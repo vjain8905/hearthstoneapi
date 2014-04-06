@@ -47,9 +47,20 @@ module.exports.routes = {
         action        : 'find'
     },
 
+<<<<<<< HEAD
   'get /cards/:field/:value': {
         controller    : 'cards',
         action        : 'search'
+=======
+    'get /cards/class/:class': {
+        controller  : 'cards',
+        action      : 'classs'
+    },
+
+    'get /cards/class/': {
+        controller  :'cards',
+        action      :'find'
+>>>>>>> 9342c76517d073213c6b79b4d6a8d910ed3ba6c9
     }
 
 };

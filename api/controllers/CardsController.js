@@ -37,6 +37,12 @@ module.exports = {
 				result: num 
 			})
 		});
+	},
+
+	default: function(req,res) {
+		Cards.find(function(err,cards) {
+			return res.json(cards);
+		});
 	}
 	
 };

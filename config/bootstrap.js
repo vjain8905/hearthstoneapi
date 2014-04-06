@@ -4147,9 +4147,9 @@ module.exports.bootstrap = function (cb) {
 
 
   // Initialize all data
-  for(var i = 0; i < cards.length; i++) {
+ /* for(var i = 0; i < cards.length; i++) {
     // console.log(cards[i].name);
-        Card.create(cards[i]).done(function(err, card) {
+        Cards.create(cards[i]).done(function(err, card) {
 
           // Error handling
           if (err) {
@@ -4159,7 +4159,7 @@ module.exports.bootstrap = function (cb) {
           }else {
             console.log("User created:", card);
           }
-        });
+        });*/
     }
 
 };

@@ -45,6 +45,7 @@ module.exports.bootstrap = function (cb) {
       "attack":2,
       "health":3,
       "race":23,
+      "name":"Bloodsail Raider",
       "description":"Battlecry: Gain Attack equal to the Attack of your weapon."
   },
   {

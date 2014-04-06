@@ -31,15 +31,6 @@ module.exports = {
 		});
 	},
 
-
-	type: function(req,res) {
-		var type = req.param('type');
-
-		Cards.find().where({ type: type}).exec(function(err,cards) {
-			return res.json(cards);
-		});
-	},
-
 	count: function(req,res){
 		Cards.count(function(err,num) {
 			return res.json({
@@ -51,9 +42,13 @@ module.exports = {
 	search: function(req,res) {
 		var field = req.param('field');
 		var value = req.param('value');
-
 		var search = {};
-		search[field] = value;
+
+		if(field === 'description' || field === 'name') {
+			search[field] = {contains: value};
+		} else {
+			search[field] = value;
+		}
 
 		Cards.find().where(search).exec(function(err,cards) {
 			return res.json(cards);

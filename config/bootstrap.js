@@ -4147,19 +4147,19 @@ module.exports.bootstrap = function (cb) {
 
 
   // Initialize all data
-  for(var i = 0; i < cards.length; i++) {
-    // console.log(cards[i].name);
-        Card.create(cards[i]).done(function(err, card) {
+  // for(var i = 0; i < cards.length; i++) {
+  //   // console.log(cards[i].name);
+  //       Card.create(cards[i]).done(function(err, card) {
 
-          // Error handling
-          if (err) {
-            return console.log(err);
+  //         // Error handling
+  //         if (err) {
+  //           return console.log(err);
 
-          // The User was created successfully!
-          }else {
-            console.log("User created:", card);
-          }
-        });
-    }
+  //         // The User was created successfully!
+  //         }else {
+  //           console.log("User created:", card);
+  //         }
+  //       });
+  //   }
 
 };

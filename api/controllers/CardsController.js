@@ -7,11 +7,6 @@
 
 module.exports = {
 
-	find: function(req,res) {
-		Cards.find(function(err,cards) {
-			return res.json(cards);
-		});
-	},
 
 	create: function (req,res){
 		return res.json({

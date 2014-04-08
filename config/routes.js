@@ -21,11 +21,15 @@
 
 module.exports.routes = {
 
-
   // Make the view located at `views/homepage.ejs` (or `views/homepage.jade`, etc. depending on your
   // default view engine) your home page.
   // 
   // (Alternatively, remove this and add an `index.html` file in your `assets` directory)
+  '/*':function(req,res,next) {
+	console.log(req.method + ' - ' + req.url + ' - ' + req.connection.remoteAddress);
+	sails.log.verbose(req.method, req.url);
+	next();
+	},
   '/': {
     view: 'homepage'
   },
@@ -36,6 +40,9 @@ module.exports.routes = {
   // If a request to a URL doesn't match any of the custom routes above, it is matched 
   // against Sails route blueprints.  See `config/blueprints.js` for configuration options
   // and examples.
+
+'get /cards/find/':{controller:'cards',action:'find'},
+'get /cards/find/:id':{controller:'cards',action:'find'},
 
   'get /cards/:field/:value': {
         controller    : 'cards',

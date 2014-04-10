@@ -41,10 +41,10 @@ module.exports.routes = {
   // against Sails route blueprints.  See `config/blueprints.js` for configuration options
   // and examples.
 
-'get /cards/find/':{controller:'cards',action:'find'},
+'get /cards/find':{controller:'cards',action:'findAll'},
 'get /cards/find/:id':{controller:'cards',action:'find'},
 
-  'get /cards/:field/:value': {
+'get /cards/:field/:value': {
         controller    : 'cards',
         action        : 'search'
     }

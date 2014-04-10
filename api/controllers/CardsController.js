@@ -34,6 +34,12 @@ module.exports = {
 		});
 	},
 
+	findAll: function(req,res) {
+		Cards.find().exec(function(err,cards) {
+			return res.json(cards);
+		});
+	},
+
 	search: function(req,res) {
 		var field = req.param('field');
 		var value = req.param('value');

@@ -4175,5 +4175,6 @@ module.exports.bootstrap = function (cb) {
   //         }
   //       });
   //   }
+//	Cards.update({id:213}, {name:"Mirror Image"}, function(err,cards) {return console.log(err + ' ' + 'cards')});
 
 };

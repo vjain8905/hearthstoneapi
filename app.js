@@ -32,6 +32,8 @@ try {
 	return;
 }
 
+require('newrelic');
+
 // Try to get `rc` dependency
 var rc;
 try {

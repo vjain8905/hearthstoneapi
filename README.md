@@ -1,3 +1,3 @@
 # hearthstoneapi
 
-aa [Sails](http://sailsjs.org) application
+See documentation at hearthstoneapi.com
